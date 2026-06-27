@@ -1,0 +1,24 @@
+name: SpawnPlugin
+version: '${project.version}'
+main: com.spawnplugin.SpawnPlugin
+api-version: '26.1'
+description: Turkish Spawn Plugin
+authors: [ ]
+
+commands:
+  setspawn:
+    description: Sunucu spawn noktasını ayarlar. (Sadece OP)
+    usage: /setspawn
+    permission: spawnplugin.setspawn
+  spawn:
+    description: Spawn noktasına ışınlanır.
+    usage: /spawn
+    permission: spawnplugin.spawn
+
+permissions:
+  spawnplugin.setspawn:
+    description: /setspawn komutunu kullanma izni (Sadece OP)
+    default: op
+  spawnplugin.spawn:
+    description: /spawn komutunu kullanma izni (Herkes)
+    default: true

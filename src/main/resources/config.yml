@@ -1,0 +1,45 @@
+################################################################################
+#                      Spawn Plugin - Ayarlar / Config                         #
+################################################################################
+
+# /spawn komutundan sonra ışınlanmadan önce bekleme süresi (saniye)
+# Oyuncu bu süre içinde hareket ederse ışınlanma iptal edilir.
+warmup-seconds: 5
+
+# Spawn konumu (otomatik doldurulur, elle düzenleme önerilmez)
+spawn:
+  world: null
+  x: 0.0
+  y: 64.0
+  z: 0.0
+  yaw: 0.0
+  pitch: 0.0
+
+################################################################################
+#                                Mesajlar / Messages                           #
+################################################################################
+# Tüm sohbet mesajlarını buradan değiştirebilirsin.
+# Renk kodları için '&' kullan (örn: &a yeşil, &c kırmızı).
+# Kullanılabilen yer tutucular (placeholder) her mesajın yanında belirtilmiştir:
+#   %seconds% -> saniye değeri
+#   %x% %y% %z% %world% -> koordinatlar ve dünya adı
+messages:
+
+  # Genel
+  player-only-command: "Bu komut sadece oyuncular tarafından kullanılabilir."
+
+  # /setspawn
+  setspawn-no-permission: "&cBu komutu kullanmak için OP olman gerekiyor!"
+  setspawn-success: "&aSpawn noktası başarıyla ayarlandı!"
+  setspawn-location-info: "&7Konum: &eX:%x% Y:%y% Z:%z% &7(%world%)"
+
+  # /spawn
+  spawn-no-permission: "&cBu komutu kullanma izniniz yok."
+  spawn-not-set: "&cSpawn noktası henüz bir OP tarafından ayarlanmamış!"
+
+  # Işınlanma ısınması (warmup)
+  warmup-already-active: "&eZaten spawn'a ışınlanmayı bekliyorsun!"
+  warmup-started: "&eSpawn'a ışınlanıyorsun... Hareket etme! &7(%seconds% saniye)"
+  warmup-cancelled-move: "&cHareket ettiğin için ışınlanma iptal edildi!"
+  warmup-spawn-missing: "&cSpawn noktası henüz ayarlanmamış!"
+  teleport-success: "&aSpawn noktasına ışınlandın!"
